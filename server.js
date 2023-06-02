@@ -13,7 +13,7 @@ app.post('/getWeather', async (req, res) => {
   try {
     for (const city of cities) {
       const response = await axios.get(
-        `https://api.weatherapi.com/v1/current.json?key=4c2c7adb158d42db9fc175807230206&q=${city}`
+        `https://api.weatherapi.com/v1/current.json?key=YOURAPIKEY&q=${city}`
       );
       const temperature = response.data.current.temp_c;
       weatherData[city] = `${temperature}C`;
